@@ -1,0 +1,97 @@
+$primary: #ff4d30;
+
+$secondary: #ababab;
+
+ 
+
+body{
+    background-color: #fafafa;
+    font-family: 'Poppins', sans-serif !important;
+     
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+
+::-webkit-scrollbar-thumb {
+    background-color: #ff4d30;
+    border-radius: 20px;
+}
+
+.no-border{
+    border: none !important;
+}
+
+.bg-transparent {
+    background-color: rgba(0, 0, 0, 0) !important; /* Establece el fondo como transparente */
+  }
+
+
+  .accordion {
+    .accordion-item {
+      border-radius: 0;
+  
+      .accordion-button {
+        border-radius: 0;
+      }
+    }
+  }
+  
+  .accordion {
+
+    
+    .accordion-button:not(.collapsed) {
+      background-color: #ff4d30;
+      color: #fff;
+        border: none;
+        box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.35);
+      &:hover {
+        background-color: darken(#ff4d30, 5%);
+      }
+    }
+  }
+  
+  .accordion {
+    .accordion-button.collapsed {
+      border: none;
+      outline: none;
+      box-shadow: none; // En caso de que haya un box-shadow que pueda parecer un borde
+    }
+  }
+  
+
+  .accordion {
+    .accordion-button {
+      // Cambiar color de flechita cuando el acordeón está abierto (sin colapsar) a negro
+      &::after {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M12.354 4.354a.5.5 0 0 0-.708 0L8 7.707 4.354 4.354a.5.5 0 1 0-.708.708l3.646 3.647a.5.5 0 0 0 .708 0l3.646-3.647a.5.5 0 0 0 0-.708z' fill='%23fff'/></svg>")!important;
+      }
+  
+      // Cambiar color de flechita cuando el acordeón está cerrado (colapsado) a blanco
+      &.collapsed::after {
+        background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><path d='M4.646 7.646a.5.5 0 0 1 .708 0L8 10.293l2.646-2.647a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 0 1 0-.708z' fill='%23000'/></svg>")!important;
+      }
+    }
+  }
+  
+  .accordion-button:focus {
+ 
+    box-shadow: 0 10px 15px 0 rgba(255, 83, 48, 0.35);
+  }
+
+  .accordion {
+    .accordion-button {
+      padding: 1.5rem;
+    }
+  }
+
+  .accordion {
+    .accordion-body {
+      color: #706f7b;
+    }
+  }
+  
+  
+  
+@import 'node_modules/bootstrap/scss/bootstrap.scss'
